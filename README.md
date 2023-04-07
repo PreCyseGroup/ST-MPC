@@ -4,4 +4,6 @@ This code shows how to implementat, in a polyedral framework, the ST-MPC scheme 
 
 Note that the mentioned paper developed the framework assuming an ellipoidal framework while this code assume a polyedral framework. However, the underlying set-theoretic MPC concepts and the used MPC philosophy are the same. 
 
-This code has been developed in Matlab R2020b. It assumes that the MPT3 toolbox (including the Yalmip package) is installed in Matlab.  
+This code has been developed in Matlab R2020b. It assumes that the MPT3 toolbox (including the Yalmip package) is installed in Matlab.
+
+The example is developed for a toy mass-spring-damper model.
