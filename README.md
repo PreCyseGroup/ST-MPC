@@ -1,1 +1,7 @@
-# ST-MPC shows a simple implementation of the ST-MPC paradigm. The example is developed for a mass-spring-damper system
+# ST-MPC
+
+This code shows how to implementat, in a polyedral framework, the ST-MPC scheme developed in the paper entitled "An ellipsoidal off-line MPC scheme for uncertain polytopic discrete-time systems", co-authored by D. Angeli, A. Casavola, G. Franze', E. Mosca, and published in the Automatica journal in 2008.
+
+Note that the mentioned paper develops the framework assuming an ellipoidal framework while this code assume a polyedral framework.
+
+This code has been developed in Matlab R2020b. It assumes that the MPT3 toolbox (including the Yalmip package) is installed. 
