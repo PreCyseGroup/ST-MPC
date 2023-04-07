@@ -1,4 +1,4 @@
-# ST-MPC
+# ST-MPC for polyedral sets
 
 This code shows how to implementat, in a polyedral framework, the ST-MPC scheme developed in the paper entitled "An ellipsoidal off-line MPC scheme for uncertain polytopic discrete-time systems", co-authored by D. Angeli, A. Casavola, G. Franze', E. Mosca, and published in the Automatica journal in 2008.
 
