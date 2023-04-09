@@ -6,4 +6,4 @@ Note that the mentioned paper developed the framework assuming an ellipoidal fra
 
 This code has been developed in Matlab R2020b. It assumes that the MPT3 toolbox (including the Yalmip package) is installed in Matlab.
 
-The example is developed for a toy mass-spring-damper model.
+The example is developed for a simple mass-spring-damper model (2 states, 1 input) subject to state and constraints, as well as, bounded disturbances.
