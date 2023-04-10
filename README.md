@@ -5,11 +5,20 @@ This code shows how to implement, in a polyedral framework, the  dual-mode reced
 ## Considered plant model and polyedral framework 
 It is assumed that the plant is described by a LTI model subject to state and input constraints, as well as, bounded state disturbances. All the constraints and disturbances sets are modeled by means of convex polyedral sets.
 
-## What ST-MPC does?
-It solves a regulation problem for a constrained linear system subject to bounded disturbances. The controller is offlined developed using three main ingredients:
+## What ST-MPC does? And how does it work?
+It solves a regulation problem for a constrained linear system subject to bounded disturbances. 
+
+Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem. 
+
+**OFFLINE**, the controller is built resorting to three main ingredients:
 - A stabilizing state-feedback controller. In the proposed implementation such a controller is a standard LQR (u=Kx).
 - The smallest Robust Positively Invariant (RPI) region associated to the closed-loop system and complying with the prescirbed constraints and disturbances.
-- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region. The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances).
+- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region. The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances). Note that the RPI region is associated to a index = 0, while the ROSC sets have an index (>=1) increasing with the number of iterations.
+
+**ONLINE**, the controller takes the following steps:
+- Find the set with the smallest index containing the current state. 
+- If the set index is zero, then the terminal controller (u=Kx) is used. 
+- Else, the control input u is obtained solved a convex optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index 1 unit smaller than the current one  
 
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b. It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
