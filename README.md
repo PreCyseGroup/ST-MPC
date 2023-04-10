@@ -9,7 +9,7 @@ It is assumed that the plant is described by a LTI model subject to state and in
 It solves a regulation problem for a constrained linear system subject to bounded disturbances. The controller is offlined developed using three main ingredients:
 - A stabilizing state-feedback controller. In the proposed implementation such a controller is a standard LQR (u=Kx).
 - The smallest Robust Positively Invariant (RPI) region associated to the closed-loop system and complying with the prescirbed constraints and disturbances.
-- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallesst RPI region.
+- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region. The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances).
 
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b. It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
