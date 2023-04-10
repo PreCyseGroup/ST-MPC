@@ -32,7 +32,7 @@ In the literature, the ST-MPC idea (or extentions of it) has been used to solve 
 - Data-driven MPC control: [[Data-Driven 1]](https://arxiv.org/abs/2303.04749) ([github](https://github.com/PreCyseGroup/Data-Driven-ST-MPC))
 - Cyber-physical systems security and privacy: [[CPS 1]](https://www.sciencedirect.com/science/article/abs/pii/S0005109823001097), [[CPS 2]](https://ieeexplore.ieee.org/abstract/document/9887874), [[CPS 3]](https://ieeexplore.ieee.org/abstract/document/9838573), [[CPS 4]](https://ieeexplore.ieee.org/abstract/document/9795085), [[CPS 5]](https://ieeexplore.ieee.org/abstract/document/9794322), [[CPS 6]](https://ieeexplore.ieee.org/abstract/document/9670717), [[CPS 7]](https://ieeexplore.ieee.org/abstract/document/9442797), [[CPS 8]](https://ieeexplore.ieee.org/abstract/document/9235508)
 - Fault-detection and mitigation: [[FD 1]](https://ieeexplore.ieee.org/document/8080208)
-- Control of swithcing and switched systems: [[SW 1]](https://onlinelibrary.wiley.com/doi/abs/10.1002/acs.2804), 
+- Control of switching and switched systems: [[SW 1]](https://onlinelibrary.wiley.com/doi/abs/10.1002/acs.2804), 
 
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b.  It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
