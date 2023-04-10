@@ -14,7 +14,7 @@ Most of the required computations are moved into an offline phase, leaving onlin
 - A stabilizing state-feedback controller.  In the proposed implementation, such a controller is a standard LQR (u=Kx).
 - The smallest Robust Positively Invariant (RPI) region associated with the closed-loop system and complying with the prescribed constraints and disturbances. In the provided code, the smallest RPI set is computed resorting to the algorithm developed in [[Rakovic et al, TAC, 2005]](https://ieeexplore.ieee.org/document/1406138)
 - A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region.  The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances).  Note that the RPI region is associated with an index = 0, while the ROSC sets have an index (>=1) increasing with the number of iterations. 
-- 
+
 **ONLINE**, the controller takes the following steps:
 - Find the set with the smallest index containing the current state. 
 - If the set index is zero, then the terminal controller (u=Kx) is used. 
