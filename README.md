@@ -6,7 +6,7 @@ This code shows how to implement, in a polyhedral framework, the dual-mode reced
 It is assumed that the plant is described by a LTI model subject to state and input constraints, as well as bounded state disturbances.  All the constraints and disturbances sets are modelled as convex polyhedral sets.
 
 ## What does ST-MPC?  And how does it work? 
-ST-MPC solves a regulation problem for a constrained linear system subject to bounded disturbances. 
+ST-MPC solves a regulation problem for linear systems subject to state constraints, input constriants and bounded disturbances. 
 
 Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem. 
 
