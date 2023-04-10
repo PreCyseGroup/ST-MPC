@@ -15,7 +15,7 @@ The example is developed assiming a toy mass-spring-damper model (2 states, 1 in
 - Run the file "main.m"
 - When requested, press any button to go from the offline phase to the online phase. The request to press a button to contieu will appear in both the title of the current Figure and in the Comamnd Window
 
-### Expected simulation outcome
+### Expected simulation outcome (figures)
 
 
 ![ROSC_SETSandTrajectory](https://user-images.githubusercontent.com/127126601/230968736-fd7bcdc2-f44a-4d66-bdd6-61a7fe6a83b6.png)
