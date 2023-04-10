@@ -12,4 +12,5 @@ This code has been developed and tested for Matlab R2020b. It assumes that the [
 The example is developed assiming a toy mass-spring-damper model (2 states, 1 input) subjects to state and input constraints, as well as, bounded disturbances. 
 
 ## Run the simulation
-Just run the file "main.m"
+- Run the file "main.m"
+- When requested, press any button to go from the offline phase to the online phase. The request to press a button to contieu will appear in both the title of the current Figure and in the Comamnd Window
