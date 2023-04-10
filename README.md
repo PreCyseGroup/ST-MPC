@@ -8,7 +8,7 @@ It is assumed that the plant is described by a LTI model subject to state and in
 ## What does ST-MPC?  And how does it work? 
 ST-MPC solves a regulation problem for linear systems subject to state constraints, input constriants and bounded disturbances. 
 
-Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem. 
+Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem (MPC optimization problem with prediction horizon set to 1). 
 
 **OFFLINE**, the controller is built resorting to three main ingredients:
 - A stabilizing state-feedback controller.  In the proposed implementation, such a controller is a standard LQR (u=Kx).
@@ -18,7 +18,7 @@ Most of the required computations are moved into an offline phase, leaving onlin
 **ONLINE**, the controller takes the following steps:
 - Find the set with the smallest index containing the current state. 
 - If the set index is zero, then the terminal controller (u=Kx) is used. 
-- Else, the control input u is obtained solving a convex constrained optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index which associated index is one unit smaller than the current one. Such an optimization defines a standard MPC optimization problem where the prediction horizon is 1.
+- Else, the control input u is obtained solving a convex constrained optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index which associated index is one unit smaller than the current one.
 
 ### ST-MPC properties
 - The strategy is recursively feasible. In other words, if the strategy admits a solution at t=0, then an admissible solution will be found for any successive iteration of the algorithm.
