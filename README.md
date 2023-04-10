@@ -18,7 +18,7 @@ Most of the required computations are moved into an offline phase, leaving onlin
 **ONLINE**, the controller takes the following steps:
 - Find the set with the smallest index containing the current state. 
 - If the set index is zero, then the terminal controller (u=Kx) is used. 
-- Else, the control input u is obtained solving a convex constrained optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index which associated index is one unit smaller than the current one.
+- Else, the control input u is obtained solving a convex constrained optimization problem which imposes that the robust one-step evolution of the system goes into a set whose associated index is one unit smaller than the current one.
 
 ### ST-MPC properties
 - The strategy is recursively feasible. In other words, if the strategy admits a solution at t=0, then an admissible solution will be found for any successive iteration of the algorithm.
