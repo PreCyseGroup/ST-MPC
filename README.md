@@ -5,7 +5,7 @@ This code shows how to implement, in a polyhedral framework, the dual-mode reced
 ## Considered plant model and polyhedral framework 
 It is assumed that the plant is described by a LTI model subject to state and input constraints, as well as bounded state disturbances.  All the constraints and disturbances sets are modelled as convex polyhedral sets.
 
-## What does ST-MPC?  And how does it work?
+## What does ST-MPC?  And how does it work? 
 ST-MPC solves a regulation problem for a constrained linear system subject to bounded disturbances. 
 
 Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem. 
@@ -18,7 +18,11 @@ Most of the required computations are moved into an offline phase, leaving onlin
 **ONLINE**, the controller takes the following steps:
 - Find the set with the smallest index containing the current state. 
 - If the set index is zero, then the terminal controller (u=Kx) is used. 
-- Else, the control input u is obtained solving a convex optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index which associated index is one unit smaller than the current one  
+- Else, the control input u is obtained solving a convex constrained optimization problem which imposes that the robust one-step evolution of the system goes into a set whose index which associated index is one unit smaller than the current one. Such an optimization defines a standard MPC optimization problem where the prediction horizon is 1.
+
+### ST-MPC properties
+- The strategy is recursively feasible. In other words, if the strategy admits a solution at t=0, then an admissible solution will be found for any successive iteration of the algorithm.
+- For any admissible initial state condition, the state trajectory reaches the RPI region in a finite number of steps where it remains confined.
 
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b.  It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
