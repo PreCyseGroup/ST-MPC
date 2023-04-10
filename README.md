@@ -17,7 +17,6 @@ The example is developed assiming a toy mass-spring-damper model (2 states, 1 in
 
 ### Expected simulation outcome (figures)
 
-
 ![ROSC_SETSandTrajectory](https://user-images.githubusercontent.com/127126601/230968736-fd7bcdc2-f44a-4d66-bdd6-61a7fe6a83b6.png)
 
 ![Input_constraints](https://user-images.githubusercontent.com/127126601/230968747-572bc2b4-603f-4752-b33c-9dc7a23f3af3.png)
