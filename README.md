@@ -40,6 +40,8 @@ This code has been developed and tested for Matlab R2020b.  It assumes that the 
 ## Example in the code
 The example is developed by assuming a toy mass-spring-damper model (2 states, 1 input) subject to state and input constraints and bounded disturbances. For control design purposed, the model is discretized.
 
+<img width="535" alt="spring_damper" src="https://user-images.githubusercontent.com/127126601/230986606-69d32895-15f6-45c3-8484-532aa2fbc53e.png">
+
 ## Run the simulation
 - Run the file "main.m"
 - When requested, press any button to go from the offline phase to the online phase.  The request to press a button will appear (at the end of the offline phase) in both the title of the current Figure and in the Command Window
