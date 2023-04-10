@@ -25,13 +25,13 @@ Most of the required computations are moved into an offline phase, leaving onlin
 - For any admissible initial state condition, the state trajectory reaches the RPI region in a finite number of steps where it remains confined.
 
 ## For which kind of control problem ST-MPC is useful ?
-In short, ST-MPC is suitable for any application requiring a computationally low demanding controller capable of dealing with hard constraints and disturbances.
+In short, ST-MPC is suitable for applications requiring a computationally low demanding controller capable of dealing with hard constraints and disturbances.
 
-In the literature, the ST-MPC paradigm (and extentions of it) have been used to solve different control problems:
-- Control of autonomous vehicles:
-- Encrypted Control:
-- Cyber-physical systems security:
-- Fault-detection and mitigation:
+In the literature, the ST-MPC paradigm (and extentions of it) have been used to solve (or partially solve) different control problems (partial list):
+- Control of autonomous vehicles: [[AV 1]](https://ieeexplore.ieee.org/abstract/document/9992658), [[AV 2]](https://link.springer.com/article/10.1007/s10626-020-00337-7), [[AV 3]](https://ieeexplore.ieee.org/abstract/document/9468311), [[AV 4]](https://ieeexplore.ieee.org/abstract/document/9206381)
+- Data-driven MPC control: [[Data-Driven 1]](https://arxiv.org/abs/2303.04749) ([github](https://github.com/PreCyseGroup/Data-Driven-ST-MPC))
+- Cyber-physical systems security and privacy: [[CPS 1]](https://www.sciencedirect.com/science/article/abs/pii/S0005109823001097), [[CPS 2]](https://ieeexplore.ieee.org/abstract/document/9887874), [[CPS 3]](https://ieeexplore.ieee.org/abstract/document/9838573), [[CPS 4]](https://ieeexplore.ieee.org/abstract/document/9795085), [[CPS 5]](https://ieeexplore.ieee.org/abstract/document/9794322), [[CPS 6]](https://ieeexplore.ieee.org/abstract/document/9670717), [[CPS 7]](https://ieeexplore.ieee.org/abstract/document/9442797), [[CPS 8]](https://ieeexplore.ieee.org/abstract/document/9235508)
+- Fault-detection and mitigation: [[FD 1]](https://ieeexplore.ieee.org/document/8080208)
 - Control of swithcing and switched systems
 
 ## Matlab implementation and required packages
