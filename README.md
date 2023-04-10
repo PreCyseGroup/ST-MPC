@@ -9,4 +9,7 @@ It is assumed that the plant is described by a LTI model subject to state and in
 This code has been developed and tested for Matlab R2020b. It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
 
 # Example
-The example is developed assiming a toy mass-spring-damper model (2 states, 1 input) subjects to state and input constraints, as well as, bounded disturbances.
+The example is developed assiming a toy mass-spring-damper model (2 states, 1 input) subjects to state and input constraints, as well as, bounded disturbances. 
+
+# Run the simulation
+Just run the file "main.m"
