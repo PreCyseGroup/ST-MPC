@@ -24,10 +24,20 @@ Most of the required computations are moved into an offline phase, leaving onlin
 - The strategy is recursively feasible. In other words, if the strategy admits a solution at t=0, then an admissible solution will be found for any successive iteration of the algorithm.
 - For any admissible initial state condition, the state trajectory reaches the RPI region in a finite number of steps where it remains confined.
 
+## For which kind of control problem ST-MPC is useful ?
+In short, ST-MPC is suitable for any application requiring a computationally low demanding controller capable of dealing with hard constraints and disturbances.
+
+In the literature, the ST-MPC paradigm (and extentions of it) have been used to solve different control problems:
+- Control of autonomous vehicles:
+- Encrypted Control:
+- Cyber-physical systems security:
+- Fault-detection and mitigation:
+- Control of swithcing and switched systems
+
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b.  It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
 
-## Example
+## Example in the code
 The example is developed by assuming a toy mass-spring-damper model (2 states, 1 input) subject to state and input constraints and bounded disturbances. 
 
 ## Run the simulation
