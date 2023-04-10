@@ -27,12 +27,12 @@ Most of the required computations are moved into an offline phase, leaving onlin
 ## For which kind of control problem ST-MPC is useful ?
 In short, ST-MPC is suitable for applications requiring a computationally low demanding controller capable of dealing with hard constraints and disturbances.
 
-In the literature, the ST-MPC paradigm (and extentions of it) have been used to solve (or partially solve) different control problems (partial list):
-- Control of autonomous vehicles: [[AV 1]](https://ieeexplore.ieee.org/abstract/document/9992658), [[AV 2]](https://link.springer.com/article/10.1007/s10626-020-00337-7), [[AV 3]](https://ieeexplore.ieee.org/abstract/document/9468311), [[AV 4]](https://ieeexplore.ieee.org/abstract/document/9206381)
+In the literature, the ST-MPC idea (or extentions of it) has been used to solve (or partially solve) different control problems (partial list):
+- Control of autonomous vehicles: [[AV 1]](https://ieeexplore.ieee.org/abstract/document/9992658), [[AV 2]](https://link.springer.com/article/10.1007/s10626-020-00337-7), [[AV 3]](https://ieeexplore.ieee.org/abstract/document/9468311), [[AV 4]](https://ieeexplore.ieee.org/abstract/document/9206381), [[AV 5]](https://ieeexplore.ieee.org/abstract/document/7987748), [[AV 6]](https://www.sciencedirect.com/science/article/pii/S0167691114002758?casa_token=QuUdNUynXZYAAAAA:2PwL_cFVxIHRhRKJzqMcmmri6Glp7KNkFJGly8VRCFkC8VtO0zR9YAAA70M1oLSyEpt1AAMn)
 - Data-driven MPC control: [[Data-Driven 1]](https://arxiv.org/abs/2303.04749) ([github](https://github.com/PreCyseGroup/Data-Driven-ST-MPC))
 - Cyber-physical systems security and privacy: [[CPS 1]](https://www.sciencedirect.com/science/article/abs/pii/S0005109823001097), [[CPS 2]](https://ieeexplore.ieee.org/abstract/document/9887874), [[CPS 3]](https://ieeexplore.ieee.org/abstract/document/9838573), [[CPS 4]](https://ieeexplore.ieee.org/abstract/document/9795085), [[CPS 5]](https://ieeexplore.ieee.org/abstract/document/9794322), [[CPS 6]](https://ieeexplore.ieee.org/abstract/document/9670717), [[CPS 7]](https://ieeexplore.ieee.org/abstract/document/9442797), [[CPS 8]](https://ieeexplore.ieee.org/abstract/document/9235508)
 - Fault-detection and mitigation: [[FD 1]](https://ieeexplore.ieee.org/document/8080208)
-- Control of swithcing and switched systems
+- Control of swithcing and switched systems: [SW 1](https://onlinelibrary.wiley.com/doi/abs/10.1002/acs.2804), 
 
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b.  It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
