@@ -13,7 +13,7 @@ The example is developed assiming a toy mass-spring-damper model (2 states, 1 in
 
 ## Run the simulation
 - Run the file "main.m"
-- When requested, press any button to go from the offline phase to the online phase. The request to press a button to contieu will appear in both the title of the current Figure and in the Comamnd Window
+- When requested, press any button to go from the offline phase to the online phase. The request to press a button will appear (at the end of the offline phase) in both the title of the current Figure and in the Comamnd Window
 
 ### Expected simulation outcome (figures)
 
