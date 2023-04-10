@@ -5,6 +5,12 @@ This code shows how to implement, in a polyedral framework, the  dual-mode reced
 ## Considered plant model and polyedral framework 
 It is assumed that the plant is described by a LTI model subject to state and input constraints, as well as, bounded state disturbances. All the constraints and disturbances sets are modeled by means of convex polyedral sets.
 
+## What ST-MPC does?
+It solves a regulation problem for a constrained linear system subject to bounded disturbances. The controller is offlined developed using three main ingredients:
+- A stabilizing state-feedback controller. In the proposed implementation such a controller is a standard LQR (u=Kx).
+- The smallest Robust Positively Invariant (RPI) region associated to the closed-loop system and complying with the prescirbed constraints and disturbances.
+- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallesst RPI region.
+
 ## Matlab implementation and required packages
 This code has been developed and tested for Matlab R2020b. It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
 
