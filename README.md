@@ -1,6 +1,6 @@
 # ST-MPC for polyedral sets
 
-This code shows how to implement, in a polyedral framework, the ST-MPC scheme developed in the paper entitled "An ellipsoidal off-line MPC scheme for uncertain polytopic discrete-time systems", co-authored by D. Angeli, A. Casavola, G. Franze', E. Mosca, and published in the Automatica journal in 2008 [paper link](https://www.sciencedirect.com/science/article/abs/pii/S0005109808003014)
+This code shows how to implement, in a polyedral framework, the ST-MPC scheme developed in the paper entitled "An ellipsoidal off-line MPC scheme for uncertain polytopic discrete-time systems", co-authored by D. Angeli, A. Casavola, G. Franze', E. Mosca, and published in the Automatica journal in 2008 [[paper link]](https://www.sciencedirect.com/science/article/abs/pii/S0005109808003014)
 
 Note that the mentioned paper developed the framework assuming an ellipoidal framework while this code assume a polyedral framework. However, the underlying set-theoretic MPC concepts and the used MPC philosophy are the same. 
 
