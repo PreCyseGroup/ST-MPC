@@ -1,4 +1,4 @@
-# Dual-model Set-Theoretic MPC (ST-MPC) for a polyhedral framework
+# Dual-mode Set-Theoretic MPC (ST-MPC) for a polyhedral framework
 
 This code shows how to implement, in a polyhedral framework, the dual-mode receding horizon controller developed in [[Angeli et al., Automatica, 2008]](https://www.sciencedirect.com/science/article/abs/pii/S0005109808003014).  Note that the mentioned article developed the control framework assuming an ellipsoidal modelling for disturbances and constraints.  On the other hand, the proposed implementation is for a polyhedral framework (i.e., constraints and disturbance sets are polyhedral sets).  Nevertheless, the underlying set-theoretic MPC concepts and the used MPC philosophy are the same.  The implemented algorithm is described in, e.g., [[Lucia et al., CONES, 2022], Section II.A.](https://ieeexplore.ieee.org/document/9795085).
 
