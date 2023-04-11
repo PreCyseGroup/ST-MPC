@@ -24,7 +24,7 @@ Most of the required computations are moved into an offline phase, leaving onlin
 - The strategy is recursively feasible. In other words, if the strategy admits a solution at t=0, then an admissible solution will be found for any successive iteration of the algorithm.
 - For any admissible initial state condition, the state trajectory reaches the RPI region in a finite number of steps where it remains confined.
 
-## For which kind of control problem ST-MPC is useful ?
+## For which kind of control problem is ST-MPC useful ?
 In short, ST-MPC is suitable for applications requiring a computationally low demanding controller capable of dealing with hard constraints and disturbances.
 
 In the literature, the ST-MPC idea (or extentions of it) has been used to solve (or partially solve) different control problems (partial list):
