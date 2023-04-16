@@ -3,7 +3,9 @@
 This code shows how to implement, in a polyhedral framework, the dual-mode receding horizon controller developed in [[Angeli et al., Automatica, 2008]](https://www.sciencedirect.com/science/article/abs/pii/S0005109808003014). Such a controller, in the literature, is also called "Set-Theoretic MPC (ST-MPC)". Note that the mentioned article developed the control framework assuming an ellipsoidal modelling for disturbances and constraints.  On the other hand, the proposed implementation is for a polyhedral framework (i.e., constraints and disturbance sets are polyhedral sets).  Nevertheless, the underlying set-theoretic MPC concepts and the used MPC philosophy are the same.  The implemented algorithm is described in, e.g., [[Lucia et al., CONES, 2022], Section II.A.](https://ieeexplore.ieee.org/document/9795085)
 
 ## Considered plant model and polyhedral framework 
-It is assumed that the plant is described by a discrete-time LTI model subject to state and input constraints, as well as bounded state disturbances.  All the constraints and disturbances sets are modelled as convex polyhedral sets.
+It is assumed that the plant is described by a discrete-time LTI model subject to state ($x$) and input ($u$) constraints, as well as bounded state disturbance $d$.  All the constraints and disturbances sets are modelled as convex polyhedral sets.
+
+$x_{k+1} = Ax_k + Bu_k + d_k,\quad$ $u_k \in \mathcal{U},$ $x_k\in \mathcal{X},$ $d_k\in \mathcal{D}$
 
 ## What does ST-MPC?  And how does it work? 
 ST-MPC solves a regulation problem for linear systems subject to state constraints, input constriants and bounded disturbances. 
@@ -11,9 +13,9 @@ ST-MPC solves a regulation problem for linear systems subject to state constrain
 Most of the required computations are moved into an offline phase, leaving online a simple and convex optimization problem (MPC optimization problem with prediction horizon set to 1). 
 
 **OFFLINE**, the controller is built resorting to three main ingredients:
-- A stabilizing state-feedback controller.  In the proposed implementation, such a controller is a standard LQR (u=Kx).
-- The smallest Robust Positively Invariant (RPI) region associated with the closed-loop system and complying with the prescribed constraints and disturbances. In the provided code, the smallest RPI set is computed resorting to the algorithm developed in [[Rakovic et al, TAC, 2005]](https://ieeexplore.ieee.org/document/1406138)
-- A family of Robust One-step Controllable Sets (ROSC) (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region.  The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances).  Note that the RPI region is associated with an index = 0, while the ROSC sets have an index (>=1) increasing with the number of iterations. 
+- A stabilizing state-feedback controller for the unconstrained and disturbance-free plant model.  In the proposed implementation, such a controller is a standard LQR (u=Kx).
+- The smallest Robust Positively Invariant (RPI) region $\mathcal{T}_0$ associated with the closed-loop system and complying with the prescribed constraints and disturbances. In the provided code, the smallest RPI set is computed resorting to the algorithm developed in [[Rakovic et al, TAC, 2005]](https://ieeexplore.ieee.org/document/1406138). Note that $\mathcal{T}_0$ is the smallest set such that $\forall x\in \mathcal{T}_0:$ $(A+BK)x\in \mathcal{T}_0$ and $Kx\in \mathcal{U}$
+- A family of $N>0$ Robust One-step Controllable Sets (ROSC) $\mathcal{T}_{i} = \lbrace x \in \mathcal{X}: \exists u \in \mathcal{U}: Ax + Bu + d \in \mathcal{T}^{j-1}, \forall d \in \mathcal{D} \rbrace$  (also known as Robust Backward Reachable Sets) recursively built starting from the smallest RPI region  $\mathcal{T}_0$.  The recursive computation of ROSC sets can be terminated when the desired state-space region of initial conditions is covered, or the set's growth saturates (for the presence of constraints and disturbances).  Note that the RPI region is associated with an index = 0, while the ROSC sets have an index (>=1) increasing with the number of iterations. 
 
 **ONLINE**, the controller takes the following steps:
 - Find the set with the smallest index containing the current state. 
