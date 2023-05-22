@@ -91,6 +91,14 @@ fprintf('Smallest RPI computation....')
 Acl = Ad+(Bd*K);% Closed-loop dynamical model (disturbance to be added to this model for RPI computation)
 alpha= 0.001; % alpha = 0.01 ;%% alpha should be in [0 1)
 T0=computeRPI(Acl,alpha,W); %algorithm developed by Rakovic et al, TAC 05.
+%check if the RPI is valid for the given state and input constraints
+if X.contains(T0)==0 
+    error('Smallest RPI not contained in the state constraints')
+end
+if U.contains(K*T0)==0
+    error('Control effort to keep the system inside the RPI not admissible')
+end
+                                                     
 fprintf('COMPLETED!\n\n')
 
 %plotting the computed RPI region
