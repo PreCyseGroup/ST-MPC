@@ -40,7 +40,7 @@ In the literature, the ST-MPC idea (or extentions of it) has been used to solve 
 This code has been developed and tested for Matlab R2020b.  It assumes that the [MPT3 toolbox](https://www.mpt3.org/) (including the Yalmip package) is correctly installed in Matlab.
 
 ## Example in the code
-The example is developed by assuming a toy mass-spring-damper model (2 states, 1 input) subject to state and input constraints and bounded disturbances. For control design purposed, the model is discretized.
+The example is developed by assuming a toy mass-spring-damper model (2 states, 1 input) subject to state and input constraints and bounded disturbances. For control design purposes, the model is discretized.
 
 <img width="535" alt="spring_damper" src="https://user-images.githubusercontent.com/127126601/230986606-69d32895-15f6-45c3-8484-532aa2fbc53e.png">
 
